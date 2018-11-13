@@ -14,7 +14,7 @@ int main(){
     }
 
    
-    printf("9^2=%d\n",a);
+   // printf("9^2=%d\n",a);
     //printf("%d",all);
 	return 0;
 	}
