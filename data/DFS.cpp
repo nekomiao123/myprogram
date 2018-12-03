@@ -24,7 +24,7 @@ struct AdjVNode{
  
 /* 顶点表头结点的定义 */
 typedef struct Vnode{
-    PtrToAdjVNode FirstEdge;/* 边表头指针 */
+    PtrToAdjVNode FirstEdge;  /* 边表头指针 */
     DataType Data;            /* 存顶点的数据 */
     /* 注意：很多情况下，顶点无数据，此时Data可以不用出现 */
 } AdjList[MaxVertexNum];    /* AdjList是邻接表类型 */
@@ -114,10 +114,12 @@ void Visit( Vertex V )
 }
 
 /* Visited[]为全局变量，已经初始化为false */
+bool Visited[MaxVertexNum] = {false};
+
 void DFS( LGraph Graph, Vertex V, void (*Visit)(Vertex) )
 {   /* 以V为出发点对邻接表存储的图Graph进行DFS搜索 */
     PtrToAdjVNode W;
-     
+    
     Visit( V ); /* 访问第V个顶点 */
     Visited[V] = true; /* 标记V已访问 */
  

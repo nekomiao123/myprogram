@@ -7,6 +7,7 @@ int G[MAX][MAX];
 void DFS(int i,int N)
 {
     int j;
+    
     visit[i] = 1;
     printf(" %d",i);
     for(j=0;j<N;j++)
